@@ -1,0 +1,37 @@
+.fa-brands {
+    margin: 10px;
+    padding: 0;
+    text-decoration: none;
+    border-radius: 20%;
+    width: auto;
+}
+footer {
+    background-color: black;
+    display: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: auto;
+    padding: 10px;
+}
+
+.youtube-link {
+    color: red;
+}
+.instagram-link {
+    color: rgb(212, 20, 212);
+}
+.itch-io-link {
+    color: red;
+}
+.linkedin-link {
+    color: blue;
+}
+
+i:hover {
+    transform: scale(1.25);
+    
+}
+i:active {
+    opacity: 0.7;
+}
