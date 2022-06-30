@@ -3,6 +3,7 @@
     padding: 0;
     text-decoration: none;
     border-radius: 20%;
+    color: white;
     width: auto;
 }
 footer {
@@ -11,21 +12,11 @@ footer {
     text-align: center;
     align-items: center;
     justify-content: center;
-    color: auto;
     padding: 10px;
 }
 
-.youtube-link {
-    color: red;
-}
-.instagram-link {
-    color: rgb(212, 20, 212);
-}
-.itch-io-link {
-    color: red;
-}
-.linkedin-link {
-    color: blue;
+body {
+    margin: 0;
 }
 
 i:hover {
