@@ -3,11 +3,13 @@
     box-sizing: border-box;
 }
 p {
-    font-size: 20pt;
+    font-size: 1.5em;
     text-align: center;
+    width: 100%;
 }
 h1 {
-    font-size: 35pt;
+    font-size: 3em;
+    margin: auto;
 }
 
 h2 {
@@ -67,8 +69,10 @@ section {
     border: 2px groove white;
     height: auto;
     width: 200px;
-    margin-top: 30px;
+    margin: 20px auto;
+    justify-self: center;
 }
+
 .about {
     padding: 20px;
     display: block;
@@ -111,6 +115,12 @@ section {
     box-shadow: 0px 2px 2px 0px white;
 }
 
+@media screen (max-width: 450px) {
+    .project-div {
+        width: 300px;
+    }
+}
+
 .project-div p {
     font-size: 15pt;
 }
@@ -137,4 +147,13 @@ a {
 
 .project-link:active .project-div {
     transform: scale(0.95)
+}
+
+.pic-container {
+    display: flex;
+    width: 20%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
 }
