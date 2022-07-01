@@ -154,13 +154,14 @@ a {
     justify-self: center;
 }
 
-@media screen and (max-width: 450px) {
-    .project-div {
-        width: 300px;
-        height: auto;
-    }
+@media (max-width: 450px) {
     .project-div img {
         width: 270px;
         height: auto;
     }
+    .project-div {
+        width: 300px;
+        height: auto;
+    }
+    
 }
