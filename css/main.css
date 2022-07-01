@@ -131,6 +131,18 @@ section {
     border-radius: 10px;
 }
 
+@media (max-width: 450px) {
+    .project-div img {
+        width: 270px;
+        height: auto;
+    }
+    .project-div {
+        width: 300px;
+        height: auto;
+    }
+    
+}
+
 a {
     text-decoration: none;
     color: white;
@@ -154,14 +166,4 @@ a {
     justify-self: center;
 }
 
-@media (max-width: 450px) {
-    .project-div img {
-        width: 270px;
-        height: auto;
-    }
-    .project-div {
-        width: 300px;
-        height: auto;
-    }
-    
-}
+
