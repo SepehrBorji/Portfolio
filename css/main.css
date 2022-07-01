@@ -119,6 +119,9 @@ section {
     .project-div {
         width: 300px;
     }
+    .project-div img{
+        width: 190px;
+    }
 }
 
 .project-div p {
