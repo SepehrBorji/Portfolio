@@ -2,19 +2,19 @@
     font-family: 'Roboto', sans-serif;
 }
 p {
-    font-size: 16pt;
+    font-size: 18pt;
     text-align: center;
 }
 h1 {
-    font-size: 30pt;
+    font-size: 35pt;
 }
 
 h2 {
     margin-top: 5px;
-    font-size: 25pt;
+    font-size: 30pt;
 }
 h3 {
-    font-size: 20pt;
+    font-size: 25pt;
 }
 
 .fa-brands {
@@ -63,14 +63,15 @@ section {
 .round-pic {
     border-radius: 50%;
     border: 2px groove white;
-    height: 200px;
-    width: auto;
+    height: auto;
+    width: 200px;
     margin-top: 30px;
 }
 .about {
     padding: 20px;
     display: block;
     width: 50%;
+    height: auto;
     margin: auto;
     text-align: center;
 }
@@ -83,7 +84,7 @@ section {
     width: 70%;
     text-align: center;
     margin: auto;
-    display: flex;
+    display: flexbox;
     flex-direction: column;
     padding: 20px;
     border: 5px groove black;
