@@ -2,7 +2,7 @@
     font-family: 'Roboto', sans-serif;
 }
 p {
-    font-size: 18pt;
+    font-size: 20pt;
     text-align: center;
 }
 h1 {
@@ -72,7 +72,6 @@ section {
     display: block;
     width: 50%;
     height: auto;
-    min-height: 50vh;
     margin: auto;
     text-align: center;
 }
