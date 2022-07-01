@@ -72,6 +72,7 @@ section {
     display: block;
     width: 50%;
     height: auto;
+    min-height: 50vh;
     margin: auto;
     text-align: center;
 }
