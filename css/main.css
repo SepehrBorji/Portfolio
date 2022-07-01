@@ -41,8 +41,7 @@ footer {
 body {
     margin: 0;
     background-image: url(/images/bg.jpg);
-    background-repeat: repeat-x;
-    background-size: contain;
+    background-size: cover;
     background-color: black;
     color: white;
     display: flex;
@@ -68,6 +67,7 @@ section {
     border: 2px groove white;
     height: 200px;
     width: auto;
+    margin: 10px;
 }
 .about {
     padding: 20px;
