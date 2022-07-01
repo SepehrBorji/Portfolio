@@ -115,15 +115,7 @@ section {
     box-shadow: 0px 2px 2px 0px white;
 }
 
-@media screen and (max-width: 450px) {
-    .project-div {
-        width: 300px;
-    }
-    .project-div img {
-        width: 190px;
-        height: auto;
-    }
-}
+
 
 .project-div p {
     font-size: 15pt;
@@ -160,4 +152,15 @@ a {
     align-items: center;
     justify-content: center;
     justify-self: center;
+}
+
+@media screen and (max-width: 450px) {
+    .project-div {
+        width: 300px;
+        height: auto;
+    }
+    .project-div img {
+        width: 270px;
+        height: auto;
+    }
 }
