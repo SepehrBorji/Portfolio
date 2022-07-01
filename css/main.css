@@ -137,7 +137,7 @@ section {
         height: auto;
     }
     .project-div {
-        width: 300px;
+        width: 300px !important;
         height: auto;
     }
     
