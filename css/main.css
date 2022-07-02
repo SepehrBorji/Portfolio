@@ -110,15 +110,17 @@ section {
 
 .project-div {
     width: 400px;
-    height: 450px;
+    height: 400px;
     padding: 10px;
     text-align: center;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    /*background-color: black;*/
+    background-color: rgb(10, 10, 10);
     margin: 15px;
     border-radius: 10px;
-    box-shadow: 0px 2px 2px 0px white;
+    border: 2px solid black;
+    /*box-shadow: 0px 2px 2px 0px white;*/
 }
 
 
