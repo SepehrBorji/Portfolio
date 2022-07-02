@@ -80,7 +80,6 @@ section {
 }
 
 .about {
-    padding: 20px;
     display: block;
     width: 90%;
     height: auto;
@@ -92,7 +91,7 @@ section {
     justify-content: center;
     align-items: center;
     color: white;
-    width: 70%;
+    width: 90%;
     text-align: center;
     margin: auto;
     display: flexbox;
