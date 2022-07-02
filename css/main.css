@@ -5,7 +5,13 @@
 p {
     font-size: 1.5em;
     text-align: center;
+}
+.about p 
+{
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 h1 {
     font-size: 3em;
@@ -76,7 +82,7 @@ section {
 .about {
     padding: 20px;
     display: block;
-    width: 50%;
+    width: 90%;
     height: auto;
     margin: auto;
     text-align: center;
@@ -119,6 +125,7 @@ section {
 
 .project-div p {
     font-size: 15pt;
+    text-align: center;
 }
 
 .project-div h3 {
