@@ -38,7 +38,7 @@ h3 {
 
 footer {
     background-color: black;
-    display: block;
+    display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -139,6 +139,10 @@ section {
     border-radius: 10px;
 }
 
+.social-icons-div {
+    display: none;
+}
+
 @media (max-width: 450px) {
     .project-div img {
         width: 270px;
@@ -148,7 +152,9 @@ section {
         width: 300px !important;
         height: auto;
     }
-    
+    .social-icons-div {
+        display: flex;
+    }
 }
 
 a {
@@ -173,5 +179,7 @@ a {
     justify-content: center;
     justify-self: center;
 }
+
+
 
 
