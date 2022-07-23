@@ -166,6 +166,7 @@ a {
 
 .project-link:hover .project-div {
     background-color: white;
+    transform: scale(1.15);
     color: black;
 }
 
