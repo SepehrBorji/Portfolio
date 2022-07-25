@@ -43,13 +43,15 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 10px;
-    margin-top: 20px;
     width: 100vw;
     border-top: 2px groove white;
+    bottom: 0;
 }
 
 body {
     margin: 0;
+    display: flex;
+    flex-direction: column;
     background-image: url("../images/bg.jpg");
     background-size: cover;
     background-color: black;
@@ -183,6 +185,35 @@ a {
     justify-self: center;
 }
 
+.blog-post 
+{
+    background-color: white;
+    text-align: left;
+    display: block;
+    color: black;
+    border: 2px groove black;
+    width: 60vw;
+    margin: 20px auto 20px auto;
+    padding: 10px;
+    min-height: 100vh;
+}
 
+.blog-title {
+    margin: auto;
+    text-align: center;
+    width: 90%;
+    padding-top: 20px;
+}
+
+.main-post-media {
+    width: 90%;
+    margin: auto;
+}
+.main-post-media img {
+    padding: 20px;
+    margin: auto;
+    width: 1000px;
+    height: 600px;
+}
 
 
