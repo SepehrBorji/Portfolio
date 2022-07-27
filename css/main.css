@@ -163,6 +163,7 @@ section {
     .blog-post {
         padding-left: 10px;
         padding-right: 10px;
+        width: 80vw;
     }
 }
 
