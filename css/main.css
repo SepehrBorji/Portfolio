@@ -160,6 +160,10 @@ section {
         align-items: center;
         justify-content: center;
     }
+    .blog-post {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 a {
@@ -240,6 +244,13 @@ a {
     gap: 20px;
     text-align: center;
 
+}
+
+.extra-screenshots h3 
+{
+    width: 90%;
+    margin: auto;
+    text-align: center;
 }
 
 .extra-screenshots img {
