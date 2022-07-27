@@ -257,8 +257,8 @@ a {
         justify-content: center;
     }
     .blog-post {
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 80vw;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 90vw;
     }
 }
