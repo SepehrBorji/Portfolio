@@ -192,16 +192,20 @@ a {
     display: block;
     color: black;
     border: 2px groove black;
-    width: 60vw;
-    margin: 20px auto 20px auto;
+    width: 1100px;
+    margin: 50px;
+    margin-top: 30px;
     padding: 20px;
     min-height: 100vh;
 }
 .blog-post p {
     text-align: left;
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 1.2rem;
 }
 
 .blog-title {
@@ -209,18 +213,24 @@ a {
     text-align: center;
     width: 90%;
     padding-top: 20px;
+    font-size: 2rem;
 }
 
 .main-post-media {
-    width: 90%;
+    width: 1000px;
+    height: 500px;
     margin: auto;
     padding: 10px;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .main-post-media img {
 
     margin: auto;
-    width: 1000px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
 }
 
 .extra-screenshots {
@@ -235,7 +245,10 @@ a {
 }
 
 .extra-screenshots img {
-    width: fit-content;
+    width: 100%;
 }
 
-
+.home-btn:hover 
+{
+    transform: scale(1.05);
+}
