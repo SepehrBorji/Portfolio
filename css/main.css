@@ -2,6 +2,9 @@
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
+body {
+    min-height: 100vh;
+}
 p {
     font-size: 1.5em;
     text-align: center;
@@ -12,6 +15,15 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.about-me {
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border: 10px double black;
 }
 h1 {
     font-size: 3em;
@@ -25,6 +37,7 @@ h2 {
 h3 {
     font-size: 25pt;
     margin: auto;
+    margin-top: 20px;
 }
 
 .fa-brands {
@@ -45,7 +58,6 @@ footer {
     padding: 10px;
     width: 100vw;
     border-top: 2px groove white;
-    bottom: 0;
 }
 
 body {
@@ -97,17 +109,9 @@ section {
     width: 90%;
     text-align: center;
     margin: auto;
-    display: flexbox;
+    display: flex;
     flex-direction: column;
     padding: 20px;
-}
-
-#project-grid-div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
 
 .project-div {
@@ -163,6 +167,15 @@ a {
     transform: scale(0.95)
 }
 
+#project-grid-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
 .pic-container {
     display: flex;
     width: 20%;
@@ -182,32 +195,6 @@ a {
     width: 70vw;
     margin-top: 30px;
     padding: 30px;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     padding-left: 70px;
     padding-right: 70px;
     min-height: 100vh;
@@ -278,9 +265,59 @@ a {
     width: 100%;
 }
 
-.home-btn:hover 
-{
+.options-div {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.optionbtn {
+    padding: 30px 60px;
+    margin: 20px;
+    background-color: rgb(10, 10, 10);
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid white;
+    font-size: x-large;
+}
+
+.optionbtn:hover {
+    background-color: white;
     transform: scale(1.15);
+    color: black;
+}
+
+.optionbtn:active {
+    transform: scale(0.95);
+}
+
+nav {
+    background-color: black;
+    width: 100vw;
+    text-align: center;
+    border-bottom: 2px groove white;
+}
+nav ul {
+    margin:0;
+    padding: 0;
+}
+nav ul li {
+    list-style: none;
+    font-size: large;
+    display: inline;
+    margin:0;
+    padding: 0;
+    
+}
+nav ul li a {
+    display: inline-block;
+    padding: 20px;
+}
+nav ul li a:hover {
+    background-color:rgb(10, 10, 10)
 }
 
 @media (max-width: 450px) {
@@ -301,5 +338,8 @@ a {
         padding-left: 20px;
         padding-right: 20px;
         width: 90vw;
+    }
+    .about-me {
+        width: 95%;
     }
 }
