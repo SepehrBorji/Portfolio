@@ -116,7 +116,8 @@ section {
 
 .project-div {
     width: 400px;
-    height: 400px;
+    height: auto;
+    min-height: 400px;
     padding: 10px;
     text-align: center;
     justify-content: center;
