@@ -20,7 +20,7 @@ p {
 .about-me {
     width: 60%;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 20px;
     background-color: rgba(0,0,0,0.75);
     color: white;
     padding: 20px;
@@ -54,7 +54,7 @@ h3 {
 
 footer {
     background-color: black;
-    display: flex;
+    display: block;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -62,6 +62,12 @@ footer {
     width: 100vw;
     border-top: 2px groove white;
 }
+
+footer h2 
+{
+    margin: auto;
+}
+
 
 body {
     margin: 0;
@@ -115,6 +121,11 @@ section {
     display: flex;
     flex-direction: column;
     padding: 20px;
+}
+
+.project-header 
+{
+    padding-top: 10px;
 }
 
 .project-div {
@@ -173,8 +184,9 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
+
 
 .pic-container {
     display: flex;
@@ -194,6 +206,7 @@ a {
     border: 2px groove black;
     width: 70vw;
     margin-top: 30px;
+    margin-bottom: 50px;
     padding: 30px;
     padding-left: 70px;
     padding-right: 70px;
