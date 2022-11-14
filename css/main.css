@@ -111,6 +111,36 @@ section {
     text-align: center;
 }
 
+.contact-form {
+    display: block;
+    width: 50vw;
+    margin: 20px;
+    padding: 30px;
+    background-color: rgba(0,0,0,0.75);
+    color: white;
+    border-radius: 1rem;
+    border: 2px groove white;
+}
+.contact-form *
+{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 5px;
+    resize: none;
+    width: 100%;
+}
+
+
+
+.contact-header {
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    width: 70%;
+}
+
 .projects {
     justify-content: center;
     align-items: center;
@@ -197,8 +227,8 @@ a {
     justify-self: center;
 }
 
-.blog-post 
-{
+
+.blog-post {
     background-color: white;
     text-align: left;
     display: block;
@@ -216,18 +246,15 @@ a {
 {
     width: 100%;
 }
-
 .blog-post img:hover 
 {
     transform:scale(1.2);
 }
-
 .blog-post p {
     text-align: left;
     width: 100%;
     font-size: 1.15rem;
 }
-
 .blog-title {
     margin: auto;
     text-align: center;
@@ -235,6 +262,7 @@ a {
     padding-top: 20px;
     font-size: 2rem;
 }
+
 
 .main-post-media {
     width: 100%;
@@ -251,10 +279,10 @@ a {
     width: 100%;
     height: 100%;
 }
-
 .main-post-media img:hover {
     transform: none;
 }
+
 
 .extra-screenshots {
     display: flex;
@@ -268,15 +296,14 @@ a {
     text-align: center;
 
 }
-
 .extra-screenshots h3 
 {
     margin: auto;
 }
-
 .extra-screenshots img {
     width: 100%;
 }
+
 
 .options-div {
     display: inline-flex;
@@ -286,7 +313,6 @@ a {
     align-items: center;
     padding-top: 20px;
 }
-
 .optionbtn {
     padding: 30px 60px;
     margin: 20px;
@@ -296,16 +322,34 @@ a {
     border: 1px solid white;
     font-size: x-large;
 }
-
 .optionbtn:hover {
     background-color: white;
     transform: scale(1.15);
     color: black;
 }
-
 .optionbtn:active {
     transform: scale(0.95);
 }
+
+
+
+.submit-btn {
+    color: white;
+    background-color: rgb(10, 10, 10);
+    border-radius: 10px;
+    border: 1px solid white;
+    font-size: medium;
+}
+.submit-btn:hover {
+    background-color: white;
+    transform: scale(1.10);
+    color: black;
+}
+.submit-btn:active {
+    transform:scale(0.95);
+}
+
+
 
 nav {
     background-color: black;
