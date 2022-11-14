@@ -54,7 +54,8 @@ h3 {
 
 footer {
     background-color: black;
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -67,6 +68,7 @@ footer h2
 {
     margin: auto;
 }
+
 
 
 body {
@@ -111,6 +113,10 @@ section {
     text-align: center;
 }
 
+
+.contact-area {
+    width: 90%;
+}
 .contact-form {
     display: block;
     width: 50vw;
@@ -131,14 +137,12 @@ section {
     width: 100%;
 }
 
-
-
 .contact-header {
     display: block;
     text-align: center;
     margin: auto;
     padding: 10px;
-    width: 70%;
+    width: 90%;
 }
 
 .projects {
@@ -383,6 +387,10 @@ nav ul li a:hover {
         height: auto;
     }
     .project-div {
+        width: 300px !important;
+        height: auto;
+    }
+    .contact-form {
         width: 300px !important;
         height: auto;
     }
