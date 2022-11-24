@@ -115,11 +115,11 @@ section {
 
 
 .contact-area {
-    width: 90%;
+    width: 50%;
 }
 .contact-form {
     display: block;
-    width: 70vw;
+    width: 30vw;
     margin: 20px;
     padding: 30px;
     background-color: rgba(0,0,0,0.75);
@@ -339,7 +339,9 @@ a {
 
 .submit-btn {
     color: white;
+    width: 10rem;
     background-color: rgb(10, 10, 10);
+    margin-top: 20px;
     border-radius: 10px;
     border: 1px solid white;
     font-size: medium;
