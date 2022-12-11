@@ -70,6 +70,23 @@ function InitializeFooter()
     }
 }
 
+function InitializePicture() 
+{
+    for (let i = 0; i < pictureContainers.length; i++) 
+    {
+        pictureContainers[i].innerHTML = 
+        `
+            <a class="home-btn" href="index.html">
+                <img class="round-pic" src="images/headshot2.jpg">
+            </a>
+        `
+    }
+}
+
+// setting up main picture
+let pictureContainers = document.querySelectorAll(".pic-container");
+InitializePicture();
+
 // setting up footer
 let footerTags = document.querySelectorAll("footer");
 InitializeFooter();
