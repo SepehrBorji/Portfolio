@@ -179,7 +179,6 @@ section {
 }
 
 
-
 .project-div p {
     font-size: 15pt;
     text-align: center;
@@ -383,6 +382,36 @@ nav ul li a:hover {
     background-color:rgb(10, 10, 10)
 }
 
+
+.game-link-container {
+    background-color: red;
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+    width: fit-content;
+    height: fit-content;
+    border: 2px groove black;
+    box-shadow: 2px 5px 5px black;
+
+}
+.game-link-container:hover {
+    transform: scale(1.15);
+}
+.game-link-container:active {
+    transform: scale(0.95);
+}
+.game-link h3 {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.project-video {
+    width: 1260px; 
+    height: 700px;
+}
+
+
 @media (max-width: 450px) {
     .project-div img {
         width: 270px;
@@ -408,5 +437,13 @@ nav ul li a:hover {
     }
     .about-me {
         width: 95%;
+    }
+    h3 
+    {
+        font-size: 20pt;
+    }
+    .project-video {
+        width: 540px; 
+        height: 300px;
     }
 }
