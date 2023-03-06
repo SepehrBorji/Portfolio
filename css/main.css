@@ -411,6 +411,11 @@ nav ul li a:hover {
     height: 700px;
 }
 
+.payroll-screenshot-container img
+{
+    height: auto;
+    width: auto;
+}
 
 @media (max-width: 450px) {
     .project-div img {

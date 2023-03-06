@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Sepehr Borji</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css" />
+        <!-- Add icon library -->
+        <script src="https://kit.fontawesome.com/ece5b48ffa.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"> 
+        <script src="/scripts/index.js" defer></script>
+    </head>
+    <body>
+        <section class="about">
+                <div class="pic-container">
+                </div>
+        </section>
+        
+        <section class="blog-post">
+            <h1 class="blog-title">A Simple Payroll Software | C#</h1>
+            <div class="main-post-media">
+                <img src="images\payroll-project\Admin constructor.png"/>
+                <img src="images\payroll-project\staff input file.png"/>
+                <img src="images\payroll-project\pay cheque 3.png"/>
+                <!-- insert main picture here -->
+            </div>
+            <h3>Overview</h3>
+            <p>
+                this is a C# console application that generates payroll slips and salary information for a small company.
+                <br> <br>
+                The idea and general guidelines for this project is from the last section of the book <i>Learn C# in one day and learn it well</i> by Jamie Chan, but I've made changes of my own.
+            </p>
+            <h3>Company Payroll requirements - Staff, Admin, Manager</h3>
+            <p>
+                The company contains 3 types of staff members. Ordinary staff members, Managers, and Administrators. All staff members have their names in the payroll system and are paid hourly wages.
+                <br> <br>
+                Ordinary staff members will be paid $20 an hour, with no eligibility for overtime or any bonuses.
+                <br> <br>
+                Administrators will be paid $30 an hour and are eligible for overtime, gaining them an extra $15 an hour (time and a half) when they work past 160 hours a month. Administrators do not have any bonuses.
+                <br> <br>
+                Managers will be paid $50 an hour and do not make overtime pay, but instead are granted a $1000 bonus when they work past 160 hours a month.
+                <br> <br>
+                To reflect these requirements in the program, there are 3 classes to represent staff, called "Staff", "Admin", and "Manager". Since managers and administrators are staff members just like ordinary staff members, it's a good idea to have "Manager" and "Admin" classes inherit functionality from the "Staff" class.
+            </p>
+            <div class="payroll-screenshot-container">
+                <img src="/images/payroll-project/Staff signature.PNG">
+                <img src="/images/payroll-project/Admin signature.PNG">
+                <img src="/images/payroll-project/Manager signature.PNG">
+            </div>
+            <p>
+                Since all staff members have an hourly rate, but the value for this hourly rate depends on what kind of staff member is instantiated, all staff members share the same "hourlyRate" field and the constructor of the class is responsible for initializing the field with the right value. 
+            </p>
+            <div class="payroll-screenshot-container">
+                <img src="/images/payroll-project/Staff constructor.PNG">
+                <img src="/images/payroll-project/Admin constructor.PNG">
+                <img src="/images/payroll-project/Manager constructor.PNG">
+            </div>
+            <p>
+                Furthermore, since the child classes are accessing the field "hourlyRate" declared in a parent class, the field has the "protected" access modifier.
+            </p>
+            <div class="payroll-screenshot-container">
+                <img src="/images/payroll-project/hourlyRate declaration.PNG">
+            </div>
+            <h3>Gathering Staff Information - FileReader class</h3>
+            <p>
+                The company could have any number of staff members and this number can change quickly. Instead of hardcoding the information of each staff member, it's a much better idea to have the names and staff positions of each staff member in a text file. The FileReader class will read this text file to gather the staff information for the rest of the program to use. This information will be returned as a list of the staff members in the company.
+            </p>
+            <div class="payroll-screenshot-container">
+                <img src="/images/payroll-project/FileReader class.PNG">
+            </div>
+            <p>
+                The data input text file is "Staff.txt" and has the following format:
+            </p>
+            <div class="payroll-screenshot-container">
+                <img src="/images/payroll-project/staff input file.PNG">
+            </div>
+            <h3>Generating the Pay Cheque - PayCheque class</h3>
+            <p>
+                The program needs to be able to generate and send out pay cheques, and it is the job of the PayCheque class to generate the pay cheque of every staff member in the form of a .txt file. For example, If there is a staff member named Joel, his pay cheque will be contained in Joel.txt.
+            </p>
+            <div class="payroll-screenshot-container">
+                <img src="/images/payroll-project/pay cheque 1.PNG">
+                <img src="/images/payroll-project/pay cheque 2.PNG">
+                <img src="/images/payroll-project/pay cheque 3.PNG">
+            </div>
+            <h3>Running the Program</h3>
+            <p>
+                Although C#10 and .NET 6 remove the need for an explicitly defined Main() method, I still added one just to keep things clean and organized (at least to me). The Main() method will be responsible for taking user input for the pay month, pay year, hours worked, etc. to generate the pay cheque information. The method takes input using a while loop so it will repeatedly prompt the user until valid values are given.
+            </p>
+            <div class="payroll-screenshot-container">
+                <img src="/images/payroll-project/while loop input.PNG">
+            </div>
+        </section>
+        <footer>
+        </footer>
+    </body>
+</html>
