@@ -451,4 +451,10 @@ nav ul li a:hover {
         width: 540px; 
         height: 300px;
     }
+
+    .payroll-screenshot-container img
+    {
+        height: auto;
+        width: 100%;
+    }
 }
