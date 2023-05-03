@@ -430,6 +430,10 @@ nav ul li a:hover {
 }
 
 @media (max-width: 450px) {
+    .center 
+    {
+        text-align: center !important;
+    }
     .project-div img {
         width: 270px;
         height: auto;
@@ -465,7 +469,7 @@ nav ul li a:hover {
         height: 300px;
     }
 
-    .payroll-screenshot-container img
+    .auto-screenshot-container img
     {
         height: auto;
         width: 100%;
