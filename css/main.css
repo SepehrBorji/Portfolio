@@ -52,6 +52,12 @@ h3 {
     width: auto;
 }
 
+.center 
+{
+    text-align: center !important;
+    vertical-align: middle;
+}
+
 footer {
     background-color: black;
     display: flex;
@@ -163,9 +169,11 @@ section {
 }
 
 .project-div {
-    width: 400px;
+    
+    max-width: 400px;
     height: auto;
-    min-height: 400px;
+    width: auto;
+    min-height: 200px;
     padding: 10px;
     text-align: center;
     justify-content: center;
@@ -189,9 +197,13 @@ section {
 }
 
 .project-div img {
-    height: 200px;
-    width: 380px;
+    height: auto;
+    max-height: 200px;
+    width: auto;
+    min-width: 350px;
+    max-width: 380px;
     border-radius: 10px;
+    padding: 10px;
 }
 
 
@@ -411,7 +423,7 @@ nav ul li a:hover {
     height: 700px;
 }
 
-.payroll-screenshot-container img
+.auto-screenshot-container img
 {
     height: auto;
     width: auto;
