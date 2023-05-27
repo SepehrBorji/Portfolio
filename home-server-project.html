@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Sepehr Borji - Home Server</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Add icon library -->
+    <script src="https://kit.fontawesome.com/ece5b48ffa.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <script src="/scripts/index.js" defer></script>
+</head>
+
+<body>
+    <section class="about">
+        <div class="pic-container">
+        </div>
+    </section>
+
+    <section class="blog-post">
+        <h1 class="blog-title">Personal Home Server | Linux</h1>
+        <div class="main-post-media">
+            <img src=" images\server-project\server-project-cover.png" />
+            <!-- insert main picture here -->
+        </div>
+        <p>
+            I came into the possession of a 19-year-old computer running a windows XP 32-bit architecture, and it seemed
+            so wasteful throwing out an entire PC even if every component is vastly outdated. Thus, my home server was
+            born.
+        </p>
+        <div class="medium-screenshot-container center">
+            <img src="images/server-project/server-tower.jpg">
+        </div>
+        <p>
+            I made a network attached storage (NAS) home server, so I can keep files in the server that can be
+            accessed
+            from any device connected to my home network. This means that I can easily create a file on my laptop,
+            save
+            it to the server, and then access that file from my phone and desktop computer without the need to
+            transfer
+            any files.
+            <br> <br>
+            I accomplished this by wiping windows XP from the system and installing Debian Linux instead with a
+            bootable
+            USB. I did this because Debian Linux is lighter than windows XP. Once I installed Linux, I also learned
+            that
+            it was simple to install the tools necessary to turn the computer into a NAS right from the Linux
+            terminal.
+            First, I explored protocols that could help me establish the server-client model of a NAS, and the
+            internet
+            was advising me to use SSH. SSH or secure shell protocol allows secure networking with a client-server
+            model.
+        </p>
+        <div class="medium-screenshot-container center">
+            <img src="images/server-project/debian-screen-pic.jpg">
+        </div>
+        <p>
+            After installing SSH, I used a Linux tool called Samba to enable communication from my windows machines
+            to
+            the Linux server. I wanted to be able to access the files in the server through the windows file
+            explorer
+            and Samba is the tool that allows this. It also controls things such as read and write permissions of
+            the
+            server directory.
+            <br> <br>
+            With Samba and SSH installed, that's everything I needed to use the server drive on windows file
+            explorer as
+            well as any other device connected to my home network. The drive is already password protected and now I
+            have a cool new storage solution because of a fun project!
+        </p>
+    </section>
+    <footer>
+    </footer>
+</body>
+
+</html>
