@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>RISC-V Emulator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Add icon library -->
+    <script src="https://kit.fontawesome.com/ece5b48ffa.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <script src="/scripts/index.js" defer></script>
+</head>
+
+<body>
+    <section class="about">
+        <div class="pic-container">
+        </div>
+    </section>
+
+    <section class="blog-post">
+        <h1 class="blog-title">RISC-V emulator | RISC-V + C</h1>
+        <div class="main-post-media">
+            <img src="images/RISC-V-project/RISC-V_project_cover.png" />
+            <!-- insert main picture here -->
+        </div>
+        <h3>What is Assembly Language?</h3>
+        <p>
+            In a <a href="https://www.linkedin.com/pulse/what-everyone-should-know-programming-sepehr-borji/">previous
+                article</a>, I talked about what programming is and what programming languages are.
+            This project uses the RISC-V (pronounced risk-five) assembly language, which is a bit different than
+            a programming language.
+        </p>
+        <p>
+            Programming languages tell a computer what to do, while assembly languages tell a computer what to do as
+            well as
+            how to manipulate the hardware to do it. Since assembly languages are so closely tied to hardware this way,
+            it is machine dependent. This means that an assembly program that works on one computer may not work on
+            another.
+            Most of us have AMD or Intel CPUs in our computers, not RISC-V CPUs. So, if I want my computer
+            to be able to run RISC-V instructions, I need an emulator to do so.
+        </p>
+        <h3>How does the program work?</h3>
+        <p>
+            This program has 2 parts. The first part disassembles (i.e., translates) binary (or hexadecimal) values to
+            RISC-V assembly language instructions and the second part emulates a RISC-V CPU for carrying out these
+            instructions. This program was made as part of a course on computer architecture and organization.
+        </p>
+        <p>
+            The first half of this program (the disassembler) takes input in the form of a text file. This file should
+            contain binary or hexadecimal values to be translated by the disassembler to RISC-V assembly instructions.
+            Here is an example of a translation from hexadecimal values (left) to their corresponding RISC-V
+            instructions (right).
+        </p>
+        <img class="enlargeable" src="images/RISC-V-project/hex_to_assembly.png">
+        <p>
+            Once the program receives the instructions to be carried out, the second half of the program (the emulator)
+            will carry out these instructions exactly like a RISC-V CPU would. Programming also gives instructions to be
+            executed, but unlike programming, assembly also tells the computer <i>how</i> to execute these instructions
+            by
+            specifying what values go into which memory components (called memory registers).
+        </p>
+        <p>
+            Assembly languages are tough to use and coding with higher level languages is far easier and more readable.
+            However, assembly languages are needed for hardware manipulation even today, and can be extremely useful for
+            “tiny” but highly impactful improvements to performance at the hardware level. Learning assembly also
+            automatically lends itself to learning more about how computer hardware works, which is essential for
+            computer engineering.
+        </p>
+    </section>
+    <footer>
+    </footer>
+</body>
+
+</html>
