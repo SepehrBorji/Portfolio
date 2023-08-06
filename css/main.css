@@ -212,9 +212,12 @@ section {
     padding: 10px;
 }
 
+.game-link {
+    text-decoration: none;
+    color: white;
+}
 
-
-a {
+.project-link {
     text-decoration: none;
     color: white;
 }
@@ -268,8 +271,8 @@ a {
     width: 100%;
 }
 
-.blog-post img:hover {
-    transform: scale(1.2);
+.enlargeable:hover {
+    transform: scale(1.1);
 }
 
 .blog-post p {
