@@ -5,10 +5,26 @@
 
 body {
     min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    color: white;
+    align-items: center;
 }
 
 p {
     font-size: 1.5em;
+    text-align: center;
+}
+
+.about {
+    width: 90%;
+    height: auto;
+    margin: auto;
     text-align: center;
 }
 
@@ -25,7 +41,6 @@ p {
     margin: auto;
     margin-top: 20px;
     background-color: rgba(0, 0, 0, 0.75);
-    color: white;
     padding: 20px;
     border-radius: 1rem;
     border: 2px groove white;
@@ -35,6 +50,7 @@ h1 {
     font-size: 3em;
     margin: auto;
     margin-bottom: 10px;
+
 }
 
 h2 {
@@ -78,20 +94,6 @@ footer h2 {
     margin: auto;
 }
 
-
-
-body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    background-image: url("../images/bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-color: black;
-    color: white;
-    align-items: center;
-}
-
 i:hover {
     transform: scale(1.25);
 
@@ -115,14 +117,6 @@ section {
     width: 200px;
     margin: 20px auto;
     justify-self: center;
-}
-
-.about {
-    display: block;
-    width: 90%;
-    height: auto;
-    margin: auto;
-    text-align: center;
 }
 
 
@@ -159,14 +153,9 @@ section {
 }
 
 .projects {
-    justify-content: center;
-    align-items: center;
-    color: white;
     width: 90%;
     text-align: center;
     margin: auto;
-    display: flex;
-    flex-direction: column;
     padding: 20px;
 }
 
@@ -248,14 +237,13 @@ section {
     margin: auto;
     align-items: center;
     justify-content: center;
-    justify-self: center;
 }
 
 
 .blog-post {
+    display: block;
     background-color: white;
     text-align: left;
-    display: block;
     color: black;
     border: 2px groove black;
     width: 70vw;
