@@ -61,7 +61,8 @@ h2 {
 h3 {
     font-size: 25pt;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 0;
+
 }
 
 .fa-brands {
@@ -201,12 +202,14 @@ section {
     padding: 10px;
 }
 
-.game-link {
+.game-link,
+.game-link:hover {
     text-decoration: none;
     color: white;
 }
 
-.project-link {
+.project-link,
+.project-link:hover {
     text-decoration: none;
     color: white;
 }
@@ -227,7 +230,7 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding-bottom: 50px;
+    /*padding-bottom: 50px;*/
 }
 
 
@@ -407,15 +410,14 @@ nav ul li a:hover {
 
 
 .game-link-container {
-    background-color: red;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin: auto;
     margin-top: 20px;
     width: fit-content;
     height: fit-content;
-    border: 2px groove black;
-    box-shadow: 2px 5px 5px black;
-
+    /*border: 2px groove black;
+    box-shadow: 2px 5px 5px black;*/
 }
 
 .game-link-container:hover {
@@ -455,6 +457,10 @@ nav ul li a:hover {
 @media (max-width: 450px) {
     .center {
         text-align: center !important;
+    }
+
+    .game-link {
+        max-width: 85vw;
     }
 
     .project-div img {

@@ -1,4 +1,4 @@
-const linkedinIcon = 
+const linkedinIcon =
     `
     <a href="https://www.linkedin.com/in/sepehr-borji/" target="_blank">
         <i class="fa-brands fa-linkedin fa-3x">
@@ -6,15 +6,15 @@ const linkedinIcon =
     </a>
     `;
 
-const itchIcon = 
+const itchIcon =
     `
     <a href="https://dr-apple-games.itch.io/" target="_blank" >
-        <i class="fa-brands fa-itch-io fa-3x" id="itch-io">
+        <i class="fa-brands fa-itch-io fa-3x itch-io">
         </i>
     </a>
     `;
 
-const gitHubIcon = 
+const gitHubIcon =
     `
     <a href="https://github.com/SepehrBorji" target="_blank">
         <i class="fa-brands fa-github fa-3x" id="github">
@@ -22,7 +22,7 @@ const gitHubIcon =
     </a>
     `;
 
-const instagramIcon = 
+const instagramIcon =
     `
     <a href="https://www.instagram.com/sepehrborji.dev/" target="_blank" >
         <i class="fa-brands fa-instagram fa-3x" id="instagram">
@@ -30,7 +30,7 @@ const instagramIcon =
     </a>
     `;
 
-const youtubeIcon = 
+const youtubeIcon =
     `
     <a href="https://www.youtube.com/channel/UCANiJRjXo400D5VQtpyGYMA" target="_blank" >
         <i class="fa-brands fa-youtube fa-3x" id="youtube">
@@ -41,20 +41,15 @@ const youtubeIcon =
 let socialIcons = [linkedinIcon, itchIcon, gitHubIcon, instagramIcon, youtubeIcon];
 
 
-function InitializeSocialIcons() 
-{
-    
-    for (let i = 0; i < socialIconsContainers.length; i++) 
-    {
+function InitializeSocialIcons() {
+
+    for (let i = 0; i < socialIconsContainers.length; i++) {
         let innerContainerHtml = null;
-        for (let j = 0; j < socialIcons.length; j++) 
-        {
-            if (innerContainerHtml === null) 
-            {
+        for (let j = 0; j < socialIcons.length; j++) {
+            if (innerContainerHtml === null) {
                 innerContainerHtml = socialIcons[j];
             }
-            else 
-            {
+            else {
                 innerContainerHtml += socialIcons[j];
             }
         }
@@ -62,20 +57,16 @@ function InitializeSocialIcons()
     }
 }
 
-function InitializeFooter() 
-{
-    for (let i = 0; i < footerTags.length; i++) 
-    {
+function InitializeFooter() {
+    for (let i = 0; i < footerTags.length; i++) {
         footerTags[i].innerHTML = `<h2>Let's connect!</h2><div class="social-icons-div"></div>`;
     }
 }
 
-function InitializePicture() 
-{
-    for (let i = 0; i < pictureContainers.length; i++) 
-    {
-        pictureContainers[i].innerHTML = 
-        `
+function InitializePicture() {
+    for (let i = 0; i < pictureContainers.length; i++) {
+        pictureContainers[i].innerHTML =
+            `
             <a class="home-btn" href="index.html">
                 <img class="round-pic" src="images/headshot2.jpg">
             </a>

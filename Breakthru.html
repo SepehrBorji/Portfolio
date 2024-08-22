@@ -1,55 +1,79 @@
 <!DOCTYPE HTML>
 <html lang="en">
-    <head>
-        <title>Sepehr Borji - Breakthru</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/main.css" />
-        <!-- Add icon library -->
-        <script src="https://kit.fontawesome.com/ece5b48ffa.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"> 
-        <script src="/scripts/index.js" defer></script>
-    </head>
-    <body>
-        <section class="about">
-                <div class="pic-container">
-                </div>
-        </section>
-        
-        <section class="blog-post">
-            <h1 class="blog-title">Breakthru | Unity and C#</h1>
-            <div class="main-post-media">
-                <iframe class="project-video" src="https://www.youtube.com/embed/sHPxUBMjbvw" title="Breakthru | Game Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-                </iframe>
-                <!-- insert main picture here -->
-            </div>
-            <div class="game-link-container">
-                <a class="game-link" href="https://dr-apple-games.itch.io/breakthru-2d" target="_blank">
-                    <h3>
-                        Play the game!
-                    </h3>
-                </a>
-            </div>
-            <h3>Game Overview</h3>
-            <p>
-                Breakthru is an arcade-style game that takes the idea of one dimensional player movement from Atari breakout.
-            </p>
-            <p>
-                Control the pink paddle to bounce the ball and destroy all the blue bricks on the screen as fast as you can to win the game in record time!
-            </p>
-            <h3>Making Breakthru - Scene Management, Static Properties, UI</h3>
-            <p>
-                An unexpected challenge with creating this game was managing scene navigation. Initially, I had considered using separate scenes for each UI, but although that would be very organized, It would involve plenty of destroying and re-instantiating of GameObjects if a user wants to jump between UI screens.
-                <br> <br>
-                I decided to use one scene for UI menus and one scene for core game-play. I also had a Game Manager GameObject in both scenes. Since I had a game over screen, victory screen, and a main menu screen all in one scene, I scripted my game manager GameObject to carry the game’s victory status across scenes and to instantly show the proper screen when the scene loads. Since this information needs to be carried across screens, I needed the property to stay intact even if my game manager GameObject instance is destroyed. Thus, I made use of something called static properties.
-                <br> <br>
-                Static properties are so useful for data persistence that I also used static properties to keep track of the user’s current and high score.
-            </p>
-        </section>
-        <footer>
-        </footer>
-    </body>
+
+<head>
+    <title>Sepehr Borji - Breakthru</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Add icon library -->
+    <script src="https://kit.fontawesome.com/ece5b48ffa.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <script src="/scripts/index.js" defer></script>
+</head>
+
+<body>
+    <section class="about">
+        <div class="pic-container">
+        </div>
+    </section>
+
+    <section class="blog-post animate__animated animate__fadeInUp animate__fast"" >
+        <h1 class=" blog-title">Breakthru | Unity and C#</h1>
+        <div class="main-post-media">
+            <iframe class="project-video" src="https://www.youtube.com/embed/sHPxUBMjbvw" title="Breakthru | Game Demo"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+            <!-- insert main picture here -->
+        </div>
+        <div class="game-link-container">
+            <a class="btn btn-danger" href="https://dr-apple-games.itch.io/breakthru-2d" target="_blank">
+                <h3>
+                    <i class="fa-brands fa-itch-io fa-1x">
+                    </i> Play the game
+                </h3>
+            </a>
+        </div>
+        <h3>Game Overview</h3>
+        <p>
+            Breakthru is an arcade-style game that takes the idea of one dimensional player movement from Atari
+            breakout.
+        </p>
+        <p>
+            Control the pink paddle to bounce the ball and destroy all the blue bricks on the screen as fast as you can
+            to win the game in record time!
+        </p>
+        <h3>Making Breakthru - Scene Management, Static Properties, UI</h3>
+        <p>
+            An unexpected challenge with creating this game was managing scene navigation. Initially, I had considered
+            using separate scenes for each UI, but although that would be very organized, It would involve plenty of
+            destroying and re-instantiating of GameObjects if a user wants to jump between UI screens.
+            <br> <br>
+            I decided to use one scene for UI menus and one scene for core game-play. I also had a Game Manager
+            GameObject in both scenes. Since I had a game over screen, victory screen, and a main menu screen all in one
+            scene, I scripted my game manager GameObject to carry the game’s victory status across scenes and to
+            instantly show the proper screen when the scene loads. Since this information needs to be carried across
+            screens, I needed the property to stay intact even if my game manager GameObject instance is destroyed.
+            Thus, I made use of something called static properties.
+            <br> <br>
+            Static properties are so useful for data persistence that I also used static properties to keep track of the
+            user’s current and high score.
+        </p>
+    </section>
+    <footer>
+    </footer>
+</body>
+
 </html>
