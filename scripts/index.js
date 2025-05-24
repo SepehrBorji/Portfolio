@@ -37,8 +37,16 @@ const youtubeIcon =
         </i>
     </a> 
     `;
+const discordIcon =
+    `
+    <a href="https://discord.gg/tzF5AQwPAP" target="_blank" >
+        <i class="fa-brands fa-discord fa-3x" id="discord">
+        </i>
+    </a> 
+    `;
 
-let socialIcons = [linkedinIcon, itchIcon, gitHubIcon, instagramIcon, youtubeIcon];
+
+let socialIcons = [linkedinIcon, itchIcon, discordIcon, gitHubIcon, instagramIcon, youtubeIcon];
 
 
 function InitializeSocialIcons() {
