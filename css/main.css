@@ -460,6 +460,10 @@ nav ul li a:hover {
         text-align: center !important;
     }
 
+    h4 {
+        font-size: 1em;
+    }
+
     .game-link {
         max-width: 85vw;
     }
@@ -481,6 +485,7 @@ nav ul li a:hover {
 
     .social-icons-div {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
     }
