@@ -455,6 +455,20 @@ nav ul li a:hover {
     width: auto;
 }
 
+.tools-section {
+    margin: auto;
+    width: 90%;
+    padding: 0;
+    display: grid;
+}
+
+.tools-section li {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 10px;
+    text-align: left;
+}
+
 @media (max-width: 450px) {
     .center {
         text-align: center !important;
