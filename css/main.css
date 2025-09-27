@@ -489,9 +489,29 @@ nav ul li a:hover {
 
 .tools-section li {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    border-radius: 10px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
     text-align: left;
+}
+
+.tools-section li span {
+    display: block;
+    overflow-wrap: anywhere;
+    /* prevents overflow on mobile */
+    word-break: normal;
+    justify-self: start;
+    /* hug the left of each cell */
+}
+
+@media (max-width: 1400px) {
+    .tools-section li {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .tools-section li {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 450px) {
