@@ -46,7 +46,8 @@ const discordIcon =
     `;
 
 
-let socialIcons = [linkedinIcon, itchIcon, discordIcon, gitHubIcon, instagramIcon, youtubeIcon];
+//let socialIcons = [linkedinIcon, itchIcon, discordIcon, gitHubIcon, instagramIcon, youtubeIcon];
+let socialIcons = [linkedinIcon, itchIcon, discordIcon, instagramIcon, youtubeIcon];
 
 
 function InitializeSocialIcons() {
