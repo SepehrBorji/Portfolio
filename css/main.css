@@ -30,7 +30,7 @@ p {
 
 .about p {
     width: 100%;
-    font-size: larger;
+    /*font-size: larger;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,7 +184,7 @@ section {
 
 
 .project-div p {
-    font-size: 13pt;
+    /*font-size: 13pt;*/
     text-align: center;
 }
 
@@ -278,7 +278,7 @@ section {
     text-align: center;
     width: 90%;
     padding-top: 20px;
-    font-size: 2rem;
+    /*font-size: 2rem;*/
 }
 
 
@@ -343,7 +343,7 @@ section {
     width: 100%;
     border-radius: 10px;
     border: 1px solid white;
-    font-size: x-large;
+    /*font-size: x-large;*/
 }
 
 .optionbtn:hover {
@@ -365,7 +365,7 @@ section {
     margin-top: 20px;
     border-radius: 10px;
     border: 1px solid white;
-    font-size: medium;
+    /*font-size: medium;*/
 }
 
 .submit-btn:hover {
@@ -561,7 +561,7 @@ nav ul li a:hover {
     }
 
     h3 {
-        font-size: 20pt;
+        /*font-size: 20pt;*/
     }
 
     .project-video {
