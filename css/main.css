@@ -17,7 +17,7 @@ body {
 }
 
 p {
-    font-size: 1.5em;
+    /*font-size: 1.5em;*/
     text-align: center;
 }
 
@@ -47,7 +47,7 @@ p {
 }
 
 h1 {
-    font-size: 3em;
+    /*font-size: 3em;*/
     margin: auto;
     margin-bottom: 10px;
 
@@ -55,11 +55,11 @@ h1 {
 
 h2 {
     margin-top: 5px;
-    font-size: 30pt;
+    /*font-size: 30pt;*/
 }
 
 h3 {
-    font-size: 25pt;
+    /*font-size: 25pt;*/
     margin: auto;
     margin-top: 0;
 
@@ -184,7 +184,7 @@ section {
 
 
 .project-div p {
-    font-size: 15pt;
+    font-size: 13pt;
     text-align: center;
 }
 
@@ -270,7 +270,7 @@ section {
 .blog-post p {
     text-align: left;
     width: 100%;
-    font-size: 1.15rem;
+    /*font-size: 1.15rem;*/
 }
 
 .blog-title {
@@ -521,7 +521,7 @@ nav ul li a:hover {
     }
 
     h4 {
-        font-size: 1em;
+        /*font-size: 1em;*/
     }
 
     .game-link {
