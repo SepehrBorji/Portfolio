@@ -1,7 +1,7 @@
 ---
 title: "Sector Five"
 description: "Sci-fi Wave-based FPS - How long can you survive?"
-image: "/images/Sector-five/capture-2.PNG"
+image: "/images/Sector-Five/Capture-2.PNG"
 tags: ["Unity", "C#", "Game Dev", "3D"]
 year: 2024
 featured: true
