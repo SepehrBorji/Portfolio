@@ -4,7 +4,31 @@ import ProfilePic from '../components/ProfilePic.astro';
 ---
 
 <BaseLayout title="Home">
-  <ProfilePic />
-  <h1>Sepehr Borji</h1>
-  <p>Hello, I'm Sepehr, an engineering student and videogame developer.</p>
+  <div class="intro-panel flex-col center">
+    <ProfilePic />
+    <h1>Sepehr Borji</h1>
+    <p>Hello, I'm Sepehr, an engineering student and videogame developer.</p>
+  </div>
 </BaseLayout>
+
+<style>
+  .intro-panel {
+    max-width: 500px;
+    margin: var(--space-8) auto;
+    padding: var(--space-6);
+    background-color: var(--color-overlay);
+    border: 2px groove var(--color-border);
+    border-radius: 1rem;
+    text-align: center;
+  }
+ 
+  .intro-panel h1 {
+    margin: 0;
+    font-size: var(--text-2xl);
+  }
+ 
+  .intro-panel p {
+    margin: 0;
+    font-size: var(--text-base);
+  }
+</style>
