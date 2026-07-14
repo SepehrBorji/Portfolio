@@ -1,10 +1,36 @@
 ---
 ---
 
-<nav>
-  <ul>
+<nav class="site-nav">
+  <ul class="flex">
     <li><a href="/">Home</a></li>
     <li><a href="/projects">Projects</a></li>
     <li><a href="/articles">Articles</a></li>
   </ul>
 </nav>
+
+<style>
+  .site-nav {
+    background-color: var(--color-bg);
+    border-bottom: 2px groove var(--color-border);
+  }
+ 
+  .site-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+  }
+ 
+  .site-nav a {
+    display: block;
+    padding: var(--space-5) var(--space-6);
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: var(--text-lg);
+  }
+ 
+  .site-nav a:hover {
+    background-color: var(--color-bg-elevated);
+  }
+</style>
