@@ -1,0 +1,74 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProfilePic from '../../components/ProfilePic.astro';
+
+const articles = await getCollection('articles');
+const sorted = articles.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout title="Articles">
+  <ProfilePic />
+  <h1 class="text-center">Articles</h1>
+  <ul class="article-grid flex">
+    {sorted.map(article => (
+      <li>
+        <a class="article-card" href={`/articles/${article.id}`}>
+          <img src={article.data.image} alt={article.data.title} />
+          <h2>{article.data.title}</h2>
+          <p>{article.data.description}</p>
+        </a>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>
+
+<style>
+  .article-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: var(--space-6) 0;
+    padding: 0;
+  }
+ 
+  .article-card {
+    display: block;
+    width: 300px;
+    padding: var(--space-3);
+    background-color: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+  }
+ 
+  .article-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+ 
+  .article-card h2 {
+    font-size: var(--text-lg);
+    margin: var(--space-3) 0 var(--space-1);
+  }
+ 
+  .article-card p {
+    font-size: var(--text-sm);
+    margin: 0;
+  }
+ 
+  .article-card:hover {
+    background-color: var(--color-surface-inverted);
+    color: var(--color-text-inverted);
+    transform: scale(1.15);
+  }
+ 
+  .article-card:active {
+    transform: scale(0.95);
+  }
+</style>
