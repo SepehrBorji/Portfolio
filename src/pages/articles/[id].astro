@@ -1,0 +1,90 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return articles.map(article => ({
+    params: { id: article.id },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+---
+
+<BaseLayout title={article.data.title}>
+  <article class="article-detail">
+    <h1 class="text-center">{article.data.title}</h1>
+      <div class="article-media center">
+        <img src={article.data.image} alt={article.data.title} />
+      </div>
+    <div class="article-body">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-detail {
+    max-width: 700px;
+    margin: var(--space-8) auto;
+    padding: var(--space-6);
+    background-color: var(--color-surface-inverted);
+    color: var(--color-text-inverted);
+    border: 2px groove var(--color-text-inverted);
+    border-radius: 10px;
+  }
+ 
+  .article-media {
+    margin: var(--space-6) 0;
+  }
+ 
+  .article-media img {
+    max-width: 100%;
+    max-height: 450px;
+    border-radius: 8px;
+  }
+ 
+  .article-body {
+    font-size: var(--text-base);
+    line-height: 1.6;
+  }
+ 
+  /* :global() is required here — this content comes from <Content />,
+     rendered markdown, not from this component's own template. */
+  .article-body :global(p) {
+    margin: 0 0 var(--space-4);
+  }
+ 
+  .article-body :global(ul) {
+    list-style: none;
+    margin: var(--space-4) 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3);
+  }
+ 
+  .article-body :global(a) {
+    display: inline-block;
+    padding: var(--space-2) var(--space-4);
+    background-color: var(--color-accent);
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+  }
+ 
+  .article-body :global(a:hover) {
+    background-color: var(--color-accent-hover);
+    transform: scale(1.15);
+  }
+ 
+  .article-body :global(a:active) {
+    transform: scale(0.95);
+  }
+</style>
