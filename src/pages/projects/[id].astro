@@ -79,12 +79,25 @@ const { Content } = await render(project);
     transition: transform 0.15s ease, background-color 0.15s ease;
   }
  
-  .project-body :global(a:hover) {
-    background-color: var(--color-accent-hover);
-    transform: scale(1.15);
+  @media (hover: hover) and (pointer: fine) {
+    .project-body :global(a:hover) {
+      background-color: var(--color-accent-hover);
+      transform: scale(1.15);
+    }
   }
  
   .project-body :global(a:active) {
+    background-color: var(--color-accent-hover);
     transform: scale(0.95);
+  }
+
+  /* main already adds a var(--space-4) gutter, so this panel's own
+     padding shrinks under the mobile breakpoint instead of stacking
+     insets on top of it. */
+  @media (max-width: 640px) {
+    .project-detail {
+      padding: var(--space-4);
+      margin-block: var(--space-6);
+    }
   }
 </style>

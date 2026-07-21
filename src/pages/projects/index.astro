@@ -31,10 +31,14 @@ const sorted = projects.sort((a, b) => b.data.year - a.data.year);
     margin: var(--space-6) 0;
     padding: 0;
   }
+
+  .project-grid li {
+    width: min(300px, 100%);
+  }
  
   .project-card {
     display: block;
-    width: 300px;
+    width: 100%;
     padding: var(--space-3);
     background-color: var(--color-bg-elevated);
     border: 1px solid var(--color-border);
@@ -62,13 +66,17 @@ const sorted = projects.sort((a, b) => b.data.year - a.data.year);
     margin: 0;
   }
  
-  .project-card:hover {
-    background-color: var(--color-surface-inverted);
-    color: var(--color-text-inverted);
-    transform: scale(1.15);
+  @media (hover: hover) and (pointer: fine) {
+    .project-card:hover {
+      background-color: var(--color-surface-inverted);
+      color: var(--color-text-inverted);
+      transform: scale(1.15);
+    }
   }
  
   .project-card:active {
+    background-color: var(--color-surface-inverted);
+    color: var(--color-text-inverted);
     transform: scale(0.95);
   }
 </style>

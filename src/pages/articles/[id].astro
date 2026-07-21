@@ -88,6 +88,16 @@ const { Content } = await render(article);
     color: var(--color-accent-hover);
   }
 
+  /* main already adds a var(--space-4) gutter, so this panel's own
+     padding shrinks under the mobile breakpoint instead of stacking
+     insets on top of it. */
+  @media (max-width: 640px) {
+    .article-detail {
+      padding: var(--space-4);
+      margin-block: var(--space-6);
+    }
+  }
+
   .article-body :global(blockquote) {
     margin: var(--space-4) 0;
     padding-left: var(--space-4);

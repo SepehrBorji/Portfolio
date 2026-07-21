@@ -2,35 +2,141 @@
 ---
 
 <nav class="site-nav">
-  <ul class="flex">
-    <li><a href="/">Home</a></li>
-    <li><a href="/projects">Projects</a></li>
-    <li><a href="/articles">Articles</a></li>
-  </ul>
+  <div class="nav-inner container">
+    <button
+      type="button"
+      class="nav-toggle"
+      aria-expanded="false"
+      aria-controls="nav-menu"
+      aria-label="Toggle navigation menu"
+    >
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <ul id="nav-menu" class="nav-menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/articles">Articles</a></li>
+    </ul>
+  </div>
 </nav>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.nav-toggle');
+  const menu = document.getElementById('nav-menu');
+  const nav = document.querySelector('.site-nav');
+
+  const closeMenu = () => {
+    menu?.classList.remove('is-open');
+    toggle?.setAttribute('aria-expanded', 'false');
+  };
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = menu?.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(Boolean(isOpen)));
+  });
+
+  document.addEventListener('click', (event) => {
+    if (nav && !nav.contains(event.target as Node)) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeMenu();
+    }
+  });
+</script>
 
 <style>
   .site-nav {
     background-color: var(--color-bg);
     border-bottom: 2px groove var(--color-border);
   }
- 
-  .site-nav ul {
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  /* Hidden above the mobile breakpoint — desktop shows the full link row. */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav-toggle-bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-text);
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: var(--space-4);
     margin: 0;
     padding: 0;
     list-style: none;
     justify-content: center;
   }
- 
-  .site-nav a {
+
+  .nav-menu a {
     display: block;
     padding: var(--space-5) var(--space-6);
     color: var(--color-text);
     text-decoration: none;
     font-size: var(--text-lg);
   }
- 
-  .site-nav a:hover {
+
+  .nav-menu a:hover {
     background-color: var(--color-bg-elevated);
+  }
+
+  /* Matches the legacy site's one real layout breakpoint (css/main.css,
+     .tools-section grid collapse) so "mobile" means the same width
+     everywhere in the project. */
+  @media (max-width: 640px) {
+    .nav-inner {
+      justify-content: flex-start;
+      padding-block: var(--space-2);
+    }
+
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      gap: 0;
+      background-color: var(--color-bg);
+      border-bottom: 2px groove var(--color-border);
+    }
+
+    .nav-menu.is-open {
+      display: flex;
+    }
+
+    .nav-menu a {
+      padding: var(--space-4) var(--space-6);
+      text-align: center;
+    }
   }
 </style>
