@@ -5,6 +5,7 @@ image: "/images/Sector-Five/Capture-2.PNG"
 tags: ["Unity", "C#", "Game Dev", "3D"]
 year: 2024
 featured: true
+category: "games"
 ---
 
 Sector Five is a sci-fi wave-based first-person shooter built in Unity. Survive increasingly difficult waves of homocidal robots for as long as you can.

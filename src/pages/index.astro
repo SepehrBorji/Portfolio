@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProfilePic from '../components/ProfilePic.astro';
+
 ---
 
 <BaseLayout title="Home">
@@ -8,12 +9,25 @@ import ProfilePic from '../components/ProfilePic.astro';
     <ProfilePic />
     <h1>Sepehr Borji</h1>
     <p>Hello, I'm Sepehr, an engineering student and videogame developer.</p>
+    <p>
+      I want to bring excitement, joy, and a sense of connection to people's lives, so
+      that we may all come alive and enjoy life.
+    </p>
+    <p>
+      I do this by using the power of technology and media to entertain, bring ideas to
+      life, and bring people together.
+    </p>
+    <p>My approach to this just happens to be engineering and game development.</p>
+
+    <a class="resume-link" href="/assets/Sepehr_Borji_Resume.pdf" download>
+      Download Resume
+    </a>
   </div>
 </BaseLayout>
 
 <style>
   .intro-panel {
-    max-width: 500px;
+    max-width: 700px;
     margin: var(--space-8) auto;
     padding: var(--space-6);
     background-color: var(--color-overlay);
@@ -30,5 +44,20 @@ import ProfilePic from '../components/ProfilePic.astro';
   .intro-panel p {
     margin: 0;
     font-size: var(--text-base);
+  }
+
+  .resume-link {
+    display: inline-block;
+    padding: var(--space-3) var(--space-6);
+    background-color: var(--color-accent);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: var(--text-base);
+    transition: background-color 0.15s ease;
+  }
+
+  .resume-link:hover {
+    background-color: var(--color-accent-hover);
   }
 </style>

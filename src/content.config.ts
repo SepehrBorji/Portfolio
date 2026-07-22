@@ -12,6 +12,7 @@ const projects = defineCollection({
     link: z.url().optional(),
     year: z.number(),
     featured: z.boolean().default(false),
+    category: z.enum(['games','engineering']), 
   }),
 });
 

@@ -61,6 +61,12 @@ body {
   flex-direction: column;
   overscroll-behavior-y: contain;
 }
+@media (pointer: fine) {
+  html, body {
+    overscroll-behavior: none;
+  }
+}
+
 
 img {
   max-width: 100%;
