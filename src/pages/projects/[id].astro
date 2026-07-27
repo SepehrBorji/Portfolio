@@ -28,7 +28,7 @@ const { Content } = await render(project);
 
 <style>
   .project-detail {
-    max-width: 700px;
+    max-width: 1000px;
     margin: var(--space-8) auto;
     padding: var(--space-6);
     background-color: var(--color-surface-inverted);
@@ -57,6 +57,32 @@ const { Content } = await render(project);
   .project-body :global(p) {
     margin: 0 0 var(--space-4);
   }
+
+  .project-body :global(h1,h2,h3,h4,h5,h6) {
+    margin: 0 0 var(--space-1);
+  }
+
+  .project-body :global(img) {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: var(--space-4) auto;
+    border-radius: 8px;
+  }
+
+  .project-body :global(img.img-small) {
+    max-width: 40%;
+  }
+ 
+  .project-body :global(img.img-medium) {
+    max-width: 70%;
+  }
+ 
+  .project-body :global(img.img-large) {
+    max-width: 100%;
+  }
+
+
  
   .project-body :global(ul) {
     list-style: none;
