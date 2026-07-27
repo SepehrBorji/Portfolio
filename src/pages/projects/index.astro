@@ -59,15 +59,16 @@ const engineeringProjects = sorted.filter((project) => project.data.category ===
   .game-link {
     display: inline-block;
     padding: var(--space-3) var(--space-6);
-    background-color: var(--color-accent);
+    background-color: var(--color-red);
     color: var(--color-text);
     text-decoration: none;
     border-radius: 10px;
-    font-size: var(--text-base);
+    font-size: var(--text-lg);
     transition: background-color 0.15s ease;
   }
 
   .game-link:hover {
-    background-color: var(--color-accent-hover);
+    background-color: var(--color-red-hover);
+    transform: scale(1.1);
   }
 </style>

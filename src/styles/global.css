@@ -25,6 +25,8 @@
   --color-accent: #2f4f4f;       /* darkslategrey */
   --color-accent-hover: #778899; /* lightslategray */
   --color-surface-inverted: #ffffff;
+  --color-red: rgb(153, 0, 0);
+  --color-red-hover: rgba(255, 0, 0);
 
   /* Typography — modular scale, ratio 1.25 (Major Third) */
   --font-sans: 'Roboto', sans-serif;
@@ -44,6 +46,9 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+html {
+  font-size: 106.25%
 }
 body {
   margin: 0;

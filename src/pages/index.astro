@@ -1,7 +1,12 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProfilePic from '../components/ProfilePic.astro';
 
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = await getCollection('projects');
+const featuredProjects = projects.filter(project => project.data.featured);
 ---
 
 <BaseLayout title="Home">
@@ -19,10 +24,16 @@ import ProfilePic from '../components/ProfilePic.astro';
     </p>
     <p>My approach to this just happens to be engineering and game development.</p>
 
-    <a class="resume-link" href="/assets/Sepehr_Borji_Resume.pdf" download>
+    <a class="btn-link" href="/assets/Sepehr_Borji_Resume.pdf" download>
       Download Resume
     </a>
   </div>
+  <section class="project-section">
+    <h2 class="project-section-header text-center">Featured Projects</h2>
+      <ul class="project-grid flex">
+        {featuredProjects.map((project) => <ProjectCard project={project} />)}
+      </ul>
+</section>
 </BaseLayout>
 
 <style>
@@ -46,7 +57,7 @@ import ProfilePic from '../components/ProfilePic.astro';
     font-size: var(--text-base);
   }
 
-  .resume-link {
+  .btn-link {
     display: inline-block;
     padding: var(--space-3) var(--space-6);
     background-color: var(--color-accent);
@@ -57,7 +68,24 @@ import ProfilePic from '../components/ProfilePic.astro';
     transition: background-color 0.15s ease;
   }
 
-  .resume-link:hover {
+  .btn-link:hover {
     background-color: var(--color-accent-hover);
+    transform: scale(1.1);
+  }
+
+  .project-section {
+    margin-block: var(--space-8);
+  }
+
+  .project-section-header {
+    margin: 0 0 var(--space-6);
+  }
+
+  .project-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 </style>
