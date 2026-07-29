@@ -21,9 +21,10 @@ const href = project.data.link ?? `/projects/${project.id}`;
     <h3>{project.data.title}</h3>
     <p>{project.data.description}</p>
     <ul class="tags">
-    {project.data.tags.map(tag => (
-      <li class="tag">{tag}</li>
-    ))}
+      {project.data.tags.map(tag => (
+        <li class="tag">{tag}</li>
+      ))}
+    </ul>
   </a>
 </li>
 
