@@ -12,27 +12,31 @@ const engineeringProjects = sorted.filter((project) => project.data.category ===
 ---
 
 <BaseLayout title="Projects">
-  <ProfilePic />
-  <h1 class="text-center">Projects</h1>
-
-  <section class="project-section">
-    <h2 class="project-section-header text-center">Games &amp; Asset Packs</h2>
-    <ul class="project-grid flex">
-      {gamesProjects.map((project) => <ProjectCard project={project} />)}
-    </ul>
-    <p class="game-link-wrap text-center">
-      <a class="game-link" href="http://drapple.sepehrborji.com/" target="_blank" rel="noopener noreferrer">
-        More at Dr. Apple Games
-      </a>
-    </p>
-  </section>
-
-  <section class="project-section">
-    <h2 class="project-section-header text-center">Engineering &amp; Software Projects</h2>
-    <ul class="project-grid flex">
-      {engineeringProjects.map((project) => <ProjectCard project={project} />)}
-    </ul>
-  </section>
+  <div class="fade-in-up">
+    <ProfilePic />
+  </div>
+  <div class="fade-in-up">
+    <h1 class="text-center">Projects</h1>
+    <section class="project-section">
+      <h2 class="project-section-header text-center">Games &amp; Asset Packs</h2>
+      <ul class="project-grid flex">
+        {gamesProjects.map((project) => <ProjectCard project={project} />)}
+      </ul>
+      <p class="game-link-wrap text-center">
+        <a class="game-link" href="http://drapple.sepehrborji.com/" target="_blank" rel="noopener noreferrer">
+          More at Dr. Apple Games
+        </a>
+      </p>
+    </section>
+  </div>
+  <div class="fade-in-up fade-in-up-delay">
+      <section class="project-section">
+      <h2 class="project-section-header text-center">Engineering &amp; Software Projects</h2>
+      <ul class="project-grid flex">
+        {engineeringProjects.map((project) => <ProjectCard project={project} />)}
+      </ul>
+    </section>
+  </div>
 </BaseLayout>
 
 <style>

@@ -7,10 +7,11 @@ import ProjectCard from '../components/ProjectCard.astro';
 
 const projects = await getCollection('projects');
 const featuredProjects = projects.filter(project => project.data.featured);
+const sortedFeaturedProjects = featuredProjects.sort((a,b) => b.data.year - a.data.year)
 ---
 
 <BaseLayout title="Home">
-  <div class="intro-panel flex-col center">
+  <div class="intro-panel flex-col center fade-in-up">
     <ProfilePic />
     <h1>Sepehr Borji</h1>
     <p>Hello, I'm Sepehr, an engineering student and videogame developer.</p>
@@ -28,7 +29,7 @@ const featuredProjects = projects.filter(project => project.data.featured);
       Download Resume
     </a>
   </div>
-  <section class="project-section">
+  <section class="project-section fade-in-up fade-in-up-delay">
     <h2 class="project-section-header text-center">Featured Projects</h2>
       <ul class="project-grid flex">
         {featuredProjects.map((project) => <ProjectCard project={project} />)}

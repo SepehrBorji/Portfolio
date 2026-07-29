@@ -126,3 +126,32 @@ main {
   white-space: nowrap;
   border: 0;
 }
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(var(--space-8));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fade-in-up 0.8s ease-out both;
+}
+
+.fade-in-up-slow {
+  animation-duration: 1.6s;
+}
+
+.fade-in-up-delay {
+  animation-delay: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up {
+    animation: none;
+  }
+}

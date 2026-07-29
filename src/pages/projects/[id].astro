@@ -94,7 +94,7 @@ const { Content } = await render(project);
     gap: var(--space-3);
   }
  
-  .project-body :global(a) {
+  .project-body :global(ul a) {
     display: inline-block;
     padding: var(--space-2) var(--space-4);
     background-color: var(--color-accent);
@@ -112,7 +112,7 @@ const { Content } = await render(project);
     }
   }
  
-  .project-body :global(a:active) {
+  .project-body :global(ul a:active) {
     background-color: var(--color-accent-hover);
     transform: scale(0.95);
   }
