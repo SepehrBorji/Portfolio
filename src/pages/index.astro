@@ -1,0 +1,92 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProfilePic from '../components/ProfilePic.astro';
+
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = await getCollection('projects');
+const featuredProjects = projects.filter(project => project.data.featured);
+const sortedFeaturedProjects = featuredProjects.sort((a,b) => b.data.year - a.data.year)
+---
+
+<BaseLayout title="Home">
+  <div class="intro-panel flex-col center fade-in-up">
+    <ProfilePic />
+    <h1>Sepehr Borji</h1>
+    <p>Hello, I'm Sepehr, an engineering student and videogame developer.</p>
+    <p>
+      I want to bring excitement, joy, and a sense of connection to people's lives, so
+      that we may all come alive and enjoy life.
+    </p>
+    <p>
+      I do this by using the power of technology and media to entertain, bring ideas to
+      life, and bring people together.
+    </p>
+    <p>My approach to this just happens to be engineering and game development.</p>
+
+    <a class="btn-link" href="/assets/Sepehr_Borji_Resume.pdf" download>
+      Download Resume
+    </a>
+  </div>
+  <section class="project-section fade-in-up fade-in-up-delay">
+    <h2 class="project-section-header text-center">Featured Projects</h2>
+      <ul class="project-grid flex">
+        {featuredProjects.map((project) => <ProjectCard project={project} />)}
+      </ul>
+</section>
+</BaseLayout>
+
+<style>
+  .intro-panel {
+    max-width: 700px;
+    margin: var(--space-8) auto;
+    padding: var(--space-6);
+    background-color: var(--color-overlay);
+    border: 2px groove var(--color-border);
+    border-radius: 1rem;
+    text-align: center;
+  }
+ 
+  .intro-panel h1 {
+    margin: 0;
+    font-size: var(--text-2xl);
+  }
+ 
+  .intro-panel p {
+    margin: 0;
+    font-size: var(--text-base);
+  }
+
+  .btn-link {
+    display: inline-block;
+    padding: var(--space-3) var(--space-6);
+    background-color: var(--color-accent);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: var(--text-base);
+    transition: background-color 0.15s ease;
+  }
+
+  .btn-link:hover {
+    background-color: var(--color-accent-hover);
+    transform: scale(1.1);
+  }
+
+  .project-section {
+    margin-block: var(--space-8);
+  }
+
+  .project-section-header {
+    margin: 0 0 var(--space-6);
+  }
+
+  .project-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+</style>

@@ -1,0 +1,1 @@
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QIf I ask you to tell me what 222x222 is, you'd have to spend even more time calculating.\\E$"}

@@ -1,0 +1,22 @@
+---
+import SocialIcons from './SocialIcons.astro';
+---
+
+<footer class="site-footer flex-col center">
+  <h2>Let's connect!</h2>
+  <SocialIcons />
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--color-bg);
+    border-top: 2px groove var(--color-border);
+    padding: var(--space-4);
+  }
+ 
+  .site-footer h2 {
+    margin: 0;
+    color: var(--color-text);
+    font-size: var(--text-xl);
+  }
+</style>

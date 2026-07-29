@@ -1,0 +1,78 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProfilePic from '../../components/ProfilePic.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+
+const projects = await getCollection('projects');
+const sorted = projects.sort((a, b) => b.data.year - a.data.year);
+
+const gamesProjects = sorted.filter((project) => project.data.category === 'games');
+const engineeringProjects = sorted.filter((project) => project.data.category === 'engineering');
+---
+
+<BaseLayout title="Projects">
+  <div class="fade-in-up">
+    <ProfilePic />
+  </div>
+  <div class="fade-in-up">
+    <h1 class="text-center">Projects</h1>
+    <section class="project-section">
+      <h2 class="project-section-header text-center">Games &amp; Asset Packs</h2>
+      <ul class="project-grid flex">
+        {gamesProjects.map((project) => <ProjectCard project={project} />)}
+      </ul>
+      <p class="game-link-wrap text-center">
+        <a class="game-link" href="http://drapple.sepehrborji.com/" target="_blank" rel="noopener noreferrer">
+          More at Dr. Apple Games
+        </a>
+      </p>
+    </section>
+  </div>
+  <div class="fade-in-up fade-in-up-delay">
+      <section class="project-section">
+      <h2 class="project-section-header text-center">Engineering &amp; Software Projects</h2>
+      <ul class="project-grid flex">
+        {engineeringProjects.map((project) => <ProjectCard project={project} />)}
+      </ul>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .project-section {
+    margin-block: var(--space-8);
+  }
+
+  .project-section-header {
+    margin: 0 0 var(--space-6);
+  }
+
+  .project-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .game-link-wrap {
+    margin-top: var(--space-6);
+  }
+
+  .game-link {
+    display: inline-block;
+    padding: var(--space-3) var(--space-6);
+    background-color: var(--color-red);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: var(--text-lg);
+    transition: background-color 0.15s ease;
+  }
+
+  .game-link:hover {
+    background-color: var(--color-red-hover);
+    transform: scale(1.1);
+  }
+</style>

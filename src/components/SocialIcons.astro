@@ -1,0 +1,48 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const socials = [
+  { name: 'LinkedIn', icon: 'simple-icons:linkedin', url: 'https://www.linkedin.com/in/sepehr-borji/' },
+  { name: 'itch.io', icon: 'simple-icons:itchdotio', url: 'https://dr-apple-games.itch.io/' },
+  { name: 'Discord', icon: 'simple-icons:discord', url: 'https://discord.gg/tzF5AQwPAP' },
+  { name: 'Instagram', icon: 'simple-icons:instagram', url: 'https://www.instagram.com/sepehrborji.dev/' },
+  { name: 'YouTube', icon: 'simple-icons:youtube', url: 'https://www.youtube.com/channel/UCANiJRjXo400D5VQtpyGYMA' },
+];
+---
+
+<div class="social-icons flex">
+  {socials.map(social => (
+    <a href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name}>
+      <Icon name={social.icon} />
+    </a>
+  ))}
+</div>
+
+<style>
+  .social-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+ 
+  .social-icons a {
+    display: flex;
+    color: var(--color-text);
+    transition: transform 0.15s ease;
+  }
+ 
+  @media (hover: hover) and (pointer: fine) {
+    .social-icons a:hover {
+      transform: scale(1.25);
+    }
+  }
+ 
+  .social-icons a:active {
+    opacity: 0.7;
+    transform: scale(0.9);
+  }
+ 
+  .social-icons svg {
+    width: 3.0rem;
+    height: 3.0rem;
+  }
+</style>
