@@ -8,7 +8,9 @@ featured: true
 category: "games"
 ---
 
-Sector Five is a sci-fi wave-based first-person shooter built in Unity. Survive increasingly difficult waves of homocidal robots for as long as you can.
+Sector Five is a sci-fi wave-based first-person shooter built in Unity. Survive increasingly difficult waves of homicidal robots for as long as you can.
 
-- [Play Fullscreen on GitHub](https://sepehrborji.github.io/Sector-Five/)
-- [Play on itch.io](https://dr-apple-games.itch.io/sector-five)
+<ul class="cta-list">
+    <li><a target="_blank" href="https://sepehrborji.github.io/Sector-Five/">Play Fullscreen on GitHub</a></li>
+    <li><a target="_blank" href="https://dr-apple-games.itch.io/sector-five">Play on itch.io</a></li>
+</ul>

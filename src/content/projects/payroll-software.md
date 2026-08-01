@@ -4,7 +4,7 @@ description: "A console application that generates pay stubs for employees in a 
 image: "/images/payroll-project/pay cheque 2.PNG"
 tags: ["C#",".NET", "Object-Oriented Programming","File I/O"]
 year: 2022
-featured: true
+featured: false
 category: "engineering"
 ---
 # Overview

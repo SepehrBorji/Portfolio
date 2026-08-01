@@ -1,1 +1,2 @@
 {"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QIf I ask you to tell me what 222x222 is, you'd have to spend even more time calculating.\\E$"}
+{"rule":"PHRASE_REPETITION","sentence":"^\\QGitHub Actions\nGitHub actions is a new modern way to have\\E$"}
