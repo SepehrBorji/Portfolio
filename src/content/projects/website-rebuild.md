@@ -1,7 +1,7 @@
 ---
 title: "Website Rebuild"
 description: "Rebuilding my personal portfolio for improved development workflow and scalability"
-image: "[ADD IMAGE]"
+image: "/images/website-rebuild-project/cover.png"
 tags: ["Astro","HTML", "CSS", "Typescript","Github Actions"]
 year: 2026
 featured: true
